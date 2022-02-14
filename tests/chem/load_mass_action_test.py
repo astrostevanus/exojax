@@ -1,9 +1,8 @@
-"""test for loading atomic data."""
+"""test for mass action constant (logK)."""
 
 import pytest
 import numpy as np
 from exojax.chem.mass_action import logK_FC
-
 
 def test_FastChem():
     T=1500.0
@@ -16,9 +15,9 @@ def test_FastChem():
     #H2O1 Water : H 2 O 1 # Chase, M. et al., JANAF thermochemical tables, 1998.
     kpH2O=[1.1033645388793820e+05,-4.1783597409582285e+00,3.1744691010633233e+00,9.4064684023068001e-04,-4.0482461482866891e-08]
     ma_coeff=np.array([kpH2,kpCO,kpCH4,kpH2O]).T
-    nu=np.array([[2,0,0],[0,1,1],[4,1,0],[2,0,1]]) #(2.1) formula matrix
-    logK=logK_FC(T,nu,ma_coeff)
-    refs=np.array([-21.12764,27.547245,-95.67498,-38.54748 ])
+    nuf=np.array([[2,0,0],[0,1,1],[4,1,0],[2,0,1]]) #(2.1) formula matrix
+    logK=logK_FC(T,nuf,ma_coeff)
+    refs=np.array([-21.12764,27.547245,-95.67498,-38.54748]) #this value was directly confirmed by FastChem
     residuals=(np.sum(logK-refs)**2)
     assert residuals < 1.e-16
 
