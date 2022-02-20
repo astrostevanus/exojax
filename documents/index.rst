@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+`[PDF version] <http://secondearths.sakura.ne.jp/exojax/exojax.pdf>`_
+   
 ExoJAX
 ==================================
 
@@ -47,8 +49,10 @@ Contents
 References 
 ---------------------
 
-- Kawahara, Kawashima, Masuda, Crossfield, Pannier, van den Bekerom (2021) accepted by ApJS: `arXiv:2105.14782 <http://arxiv.org/abs/2105.14782>`_ (Paper I)
-   
+- Kawahara, Kawashima, Masuda, Crossfield, Pannier, van den Bekerom, [ApJS 258, 31 (2022)](https://iopscience.iop.org/article/10.3847/1538-4365/ac3b4d) (Paper I)
+
+
+  
 License & Attribution
 ---------------------
 
