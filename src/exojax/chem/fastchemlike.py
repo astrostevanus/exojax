@@ -91,8 +91,8 @@ def species_index_same_epsilonj(epsiloni,epsilonj,nuf):
         nufsamej.append(np.array(nuf[:,j][~mm[:,j]],dtype=int))
     return isamej, nufsamej
 
-def calc_Amatrix(nuf,xj,Aj0):
-    """calc A matrix in Stock et al. (2018) (2.28, 2.29)
+def calc_Amatrix_np(nuf,xj,Aj0):
+    """calc A matrix in Stock et al. (2018) (2.28, 2.29) numpy version
     
     Args:
         nuf: formula matrix
@@ -115,6 +115,5 @@ def calc_Amatrix(nuf,xj,Aj0):
         lprod_i=np.prod(np.delete(xnuf,j,axis=1),axis=1) # Prod n_l^nu_{ij}(2.29) for all i
         kprodi=Ki*lprod_i[i]
         for ik,k in enumerate(klist):
-            k=klist[ik]
             Ap[j,k]=Ap[j,k]+k*kprodi[ik]
     return Ap
