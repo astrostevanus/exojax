@@ -189,7 +189,7 @@ def calc_Amatrix(nuf,xj,Keq,Aj0,isamej_formatted, nufsamej_formatted,Njmax):
     #Apj initialization
     Ap=jnp.zeros((numj,Njmax+1))
     Ap=Ap.at[:,1].set(1.0)
-    Ap.at[:,0].set(Aj0)
+    Ap=Ap.at[:,0].set(Aj0)
     Apj=[0,Ap]
 
     Apj,_=scan(f,Apj,xs)
